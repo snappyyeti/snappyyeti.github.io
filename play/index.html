@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#3a6ff0">
+    <title>Dig Down</title>
+    <style>
+      html, body {
+        margin: 0; height: 100%; overflow: hidden; touch-action: none;
+        -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+        background: linear-gradient(180deg, #2f8cff 0%, #7a2fd6 100%);
+      }
+      #frame { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+      #unity-canvas { display: block; background: #1b1f4a; touch-action: none; outline: none; }
+      #loader {
+        position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        gap: 18px; font-family: system-ui, -apple-system, sans-serif; color: #fbf4e6; font-weight: 800;
+      }
+      #loader .title { font-size: 34px; letter-spacing: 1px; text-shadow: 0 3px 0 #1b0f3a; }
+      #bar { width: min(70vw, 360px); height: 20px; border-radius: 12px; background: rgba(10, 8, 40, 0.45); overflow: hidden; }
+      #fill { height: 100%; width: 0; border-radius: 12px; background: linear-gradient(180deg, #ffe27a, #ffb21a); transition: width 0.15s; }
+      #msg { opacity: 0.85; font-size: 15px; max-width: 80vw; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div id="frame"><canvas id="unity-canvas" tabindex="-1"></canvas></div>
+    <div id="loader">
+      <div class="title">DIG DOWN</div>
+      <div id="bar"><div id="fill"></div></div>
+      <div id="msg">Loading…</div>
+    </div>
+    <script>
+      var canvas = document.getElementById("unity-canvas");
+      var mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      // pe telefon: tot ecranul; pe PC: un „telefon” 9:16 centrat
+      function fit() {
+        var w = window.innerWidth, h = window.innerHeight;
+        if (mobile) { canvas.style.width = w + "px"; canvas.style.height = h + "px"; return; }
+        var ch = h, cw = Math.round(h * 9 / 16);
+        if (cw > w) { cw = w; ch = Math.round(w * 16 / 9); }
+        canvas.style.width = cw + "px"; canvas.style.height = ch + "px";
+      }
+      window.addEventListener("resize", fit);
+      fit();
+
+      var buildUrl = ".";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/webgl.data.unityweb",
+        frameworkUrl: buildUrl + "/webgl.framework.js.unityweb",
+        codeUrl: buildUrl + "/webgl.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Snappy Yeti",
+        productName: "Dig Down",
+        productVersion: "0.1.0",
+        // rezoluție limitată pe telefon (ecranele cu densitate 3x ar costa mult)
+        devicePixelRatio: Math.min(mobile ? 2 : 1.5, window.devicePixelRatio || 1),
+        showBanner: function (msg, type) { if (type === "error") document.getElementById("msg").textContent = msg; },
+      };
+
+      var script = document.createElement("script");
+      script.src = buildUrl + "/webgl.loader.js";
+      script.onload = function () {
+        createUnityInstance(canvas, config, function (progress) {
+          document.getElementById("fill").style.width = (100 * progress) + "%";
+        }).then(function () {
+          document.getElementById("loader").remove();
+        }).catch(function (message) {
+          document.getElementById("msg").textContent = message;
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>
