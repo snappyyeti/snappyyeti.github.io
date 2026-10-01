@@ -1,2 +1,3 @@
 # app-ads.txt for Snappy Yeti (https://snappyyeti.github.io)
-# The authorized ad sellers for our apps. Lines from AppLovin MAX (and other mediated networks) will be added here.
+# Authorized sellers of ads in our apps.
+google.com, pub-9813010884773832, DIRECT, f08c47fec0942fa0
