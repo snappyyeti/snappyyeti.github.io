@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Snappy Yeti</title>
-  <meta name="description" content="Privacy Policy for Snappy Yeti games, including Dig Down.">
+  <meta name="description" content="Privacy Policy for Snappy Yeti games, including Drill Down.">
   <link rel="icon" href="gem.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,78 +27,168 @@
     }
     h1 { font-family: "Bungee", sans-serif; font-size: clamp(26px, 5vw, 38px); line-height: 1.15; margin: 0 0 6px; color: var(--ink); }
     h2 { font-size: 22px; margin: 30px 0 8px; color: var(--ink); }
+    h3 { font-size: 18px; margin: 20px 0 6px; color: var(--ink); }
     p, li { font-size: 16.5px; }
     .meta { color: var(--muted); font-weight: 800; margin: 0 0 20px; }
     a { color: #2a5bd7; }
     ul { padding-left: 22px; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: 15.5px; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid #e4e0f0; }
+    th { color: var(--ink); }
   </style>
 </head>
 <body>
   <header><a href="index.html">Snappy <span>Yeti</span></a></header>
 
   <article>
+
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: October 1, 2026 · Updated: October 1, 2026</p>
+    <p class="meta">Effective date: October 1, 2026 · Updated: October 10, 2026</p>
 
-    <p>This Privacy Policy explains how Snappy Yeti (“we”, “us”, “our”) handles information when you play our mobile
-      games, including <strong>Dig Down</strong> (the “Game”). The data controller is Alexandru-Mihai Panait. If you have any
-      questions, contact us at <a href="mailto:trashygoo@gmail.com">trashygoo@gmail.com</a>.</p>
+    <p>This Privacy Policy explains what information our mobile game <strong>Drill Down</strong> (the “Game”) and
+      other games by Snappy Yeti (“we”, “us”, “our”) handle, why, and the choices you have. We try to collect as
+      little as possible: the Game has no username or password, no chat, and it never asks for your name, email
+      address, age or location.</p>
+    <p>The data controller is Alexandru-Mihai Panait, trading as Snappy Yeti. Contact:
+      <a href="mailto:trashygoo@gmail.com">trashygoo@gmail.com</a>.</p>
 
-    <h2>1. Information we collect ourselves</h2>
-    <p>The Game does not require an account and we do not ask for your name, email address or other contact
-      details. Your game progress (such as your best depth, coins, upgrades and settings) is stored only on your
-      device. We do not receive or store this information on our servers. If you uninstall the Game, this
-      progress is deleted.</p>
-
-    <h2>2. Advertising</h2>
-    <p>The Game is free to play and shows advertisements. Some ads are optional: you can choose to watch them in
-      exchange for an in-game reward. Ads are served through <strong>Google AdMob</strong> and the advertising
-      partners it works with (our “advertising partners”). To deliver and measure ads, our advertising partners may
-      automatically collect information from your device, such as:</p>
+    <h2>1. Summary</h2>
     <ul>
-      <li>your device’s advertising identifier (for example, the Google Advertising ID);</li>
-      <li>IP address and approximate location derived from it;</li>
-      <li>device type, operating system, language, and app version;</li>
-      <li>information about the ads you see and interact with.</li>
+      <li>Your progress is backed up to a game server so you can keep it on a new phone.</li>
+      <li>The weekly leaderboard shows a player name and your score to other players.</li>
+      <li>The Game shows ads from Google AdMob. In the EEA, UK and Switzerland we ask for your consent first.</li>
+      <li>We use Google Firebase to see how the Game is played and to find crashes.</li>
+      <li>Payments are handled by Google Play or the Apple App Store. We never see your card details.</li>
+      <li>You can delete your data inside the Game or by email (see section 6).</li>
     </ul>
-    <p>This information is used to show ads, limit how often you see the same ad, measure ad performance, prevent
-      fraud and, where permitted, show ads that are more relevant to you. Our advertising partners process this
-      information under their own privacy policies. You can learn more in the
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and in
-      <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a>.</p>
 
-    <h2>3. Your choices and consent</h2>
+    <h2>2. What leaves your device, and why</h2>
+
+    <h3>2.1 Player ID and cloud save (Unity Gaming Services)</h3>
+    <p>When you first play, the Game creates a random, anonymous player ID with <strong>Unity Authentication</strong>
+      (Unity Technologies). Your save data (progress, coins, gems, drills, items you own and settings) is stored with
+      <strong>Unity Cloud Save</strong> under that ID, so it can be restored if you reinstall or change phones.</p>
+
+    <h3>2.2 Google Play Games and Game Center (optional)</h3>
+    <p>On Android you can connect the Game to <strong>Google Play Games</strong>. On iPhone, where available, the Game
+      can use <strong>Apple Game Center</strong>. If you do, your Play Games or Game Center player ID is linked to your
+      anonymous player ID, so the same progress can be found on another device. We do not receive your Google or
+      Apple password or email address.</p>
+
+    <h3>2.3 Leaderboard (public)</h3>
+    <p>The weekly leaderboard uses <strong>Unity Leaderboards</strong>. It stores your player ID, a player name and your
+      score (meters drilled this week). The name is generated automatically (for example “BraveDog#1234”) and you can
+      change it in the Game. <strong>Your player name and score are visible to other players.</strong> Please do not
+      use your real name or anything personal as your player name.</p>
+
+    <h3>2.4 Analytics (Google Analytics for Firebase)</h3>
+    <p>To understand how the Game is played (for example, where players get stuck), the Game sends gameplay events to
+      <strong>Google Analytics for Firebase</strong>. These include runs started and finished, depth reached, worlds and
+      bosses completed, upgrades bought, ads watched, offers shown, purchases started or completed, screens opened and
+      short error messages. They come with device information (model, operating system, app version, country) and an
+      app-instance identifier. We do not send your name, contact details or anything you type.</p>
+    <p>In the EEA, the UK and Switzerland, analytics stays <strong>off until you agree</strong> to the relevant purposes
+      in the consent form (section 3). If you refuse, no analytics events are sent.</p>
+
+    <h3>2.5 Crash reports (Firebase Crashlytics)</h3>
+    <p>If the Game crashes or hits an error, <strong>Firebase Crashlytics</strong> sends a crash report: the technical
+      error and where it happened in the code, device model, operating system, app version, a Crashlytics installation
+      ID and basic context (for example which world and screen you were on). We use this only to find and fix bugs.</p>
+
+    <h3>2.6 Game settings (Firebase Remote Config)</h3>
+    <p>The Game downloads its tuning settings (for example, how often ads may appear) from <strong>Firebase Remote
+      Config</strong>. To do this, Firebase receives a Firebase installation ID and basic app and device information.
+      We sometimes test two versions of a setting with different groups of players; the group label is recorded with
+      analytics.</p>
+
+    <h3>2.7 Advertising (Google AdMob)</h3>
+    <p>The Game is free and shows ads through <strong>Google AdMob</strong>: optional rewarded ads that you choose to
+      watch for an in-game reward, and occasional full-screen ads between runs. To show and measure ads, Google may
+      collect your device's advertising identifier (for example the Google Advertising ID, or Apple's IDFA if you allow
+      tracking), your IP address and approximate location derived from it, device and app information, and how you
+      interact with ads. Google uses this to show ads, limit repeats, measure results, prevent fraud and, where you
+      allow it, show more relevant ads. Ads in the Game are limited to content suitable for teenagers. Learn more in the
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and
+      <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses
+      information from apps that use its services</a>.</p>
+
+    <h3>2.8 In-app purchases</h3>
+    <p>Purchases are processed by <strong>Google Play</strong> or the <strong>Apple App Store</strong>. The store tells
+      the Game which item was bought (product ID, price and currency, a purchase token or receipt) so it can be
+      delivered. We never receive your payment card or bank details.</p>
+
+    <h3>2.9 Notifications</h3>
+    <p>If you allow notifications, the Game schedules local reminders on your device (for example, when your mine is
+      full). They are created on the device and send no data to us. You can turn them off in your device settings.</p>
+
+    <h2>3. Your consent and choices</h2>
     <ul>
-      <li><strong>EEA, UK and Switzerland:</strong> before personalized ads are shown, the Game asks for your consent.
-        You can refuse; you will then see non-personalized ads. You can change your choice at any time with the
-        <strong>PRIVACY</strong> button in the Game’s settings (shown on the screen after each run).</li>
-      <li><strong>All Android users:</strong> you can reset your advertising ID or opt out of ads personalization in
-        your device settings (Settings → Google → Ads, or Settings → Privacy → Ads, depending on your device).</li>
+      <li><strong>EEA, UK and Switzerland:</strong> when you start the Game, a consent form from Google's User
+        Messaging Platform asks for your choices. Until you answer, analytics is off. You can refuse; you will then
+        see limited, non-personalized ads, and no analytics is collected. You can change your choice at any time with
+        <strong>PRIVACY OPTIONS</strong> in the Game's settings.</li>
+      <li><strong>iPhone:</strong> where the Game asks to track you for ads (Apple's App Tracking Transparency), you can
+        refuse. You can change this later in iOS Settings → Privacy &amp; Security → Tracking.</li>
+      <li><strong>Android:</strong> you can reset or delete your advertising ID in your device settings (for example
+        Settings → Privacy → Ads, or Settings → Google → Ads).</li>
       <li><strong>California and other US states:</strong> you can opt out of the “sale” or “sharing” of personal
-        information for targeted advertising using the options above or by contacting us.</li>
+        information for targeted advertising using the options above, or by contacting us.</li>
     </ul>
 
-    <h2>4. Children</h2>
-    <p>The Game is not directed to children under 13 (or the equivalent minimum age in your country), and we do not
-      knowingly collect personal information from them. If you believe a child has provided us personal
-      information, please contact us and we will take appropriate steps.</p>
+    <h2>4. Why we use your data (legal bases under the GDPR)</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>What</th><th>Legal basis</th></tr>
+        <tr><td>Player ID, cloud save, leaderboard, Google Play Games / Game Center link</td><td>Providing the Game and the features you use (contract)</td></tr>
+        <tr><td>Personalized ads; analytics in the EEA, UK and Switzerland</td><td>Your consent</td></tr>
+        <tr><td>Non-personalized ads, fraud prevention</td><td>Our legitimate interest in funding a free game, as set out in the consent form</td></tr>
+        <tr><td>Crash reports and game settings</td><td>Our legitimate interest in a stable, working game</td></tr>
+        <tr><td>Purchase records</td><td>Contract, and legal obligations (tax, refunds)</td></tr>
+      </table>
+    </div>
 
-    <h2>5. Data retention and security</h2>
-    <p>We do not keep personal data on our own servers. Data collected by our advertising partners is kept according
-      to their policies. We choose reputable partners and keep the Game’s software up to date to protect your
-      information.</p>
+    <h2>5. How long we keep data</h2>
+    <ul>
+      <li><strong>Cloud save, player ID and leaderboard entry:</strong> until you delete your data (section 6), or until
+        we shut the Game down.</li>
+      <li><strong>Analytics events:</strong> 14 months in Google Analytics, then deleted automatically.</li>
+      <li><strong>Crash reports:</strong> for the limited period set by Firebase Crashlytics.</li>
+      <li><strong>Advertising data:</strong> kept by Google under its own policies.</li>
+      <li><strong>Emails you send us:</strong> as long as needed to answer you.</li>
+    </ul>
 
-    <h2>6. Your rights</h2>
-    <p>Depending on where you live, you may have the right to access, correct, delete or restrict the processing of
-      your personal data, to object to processing, and to withdraw consent. Because we do not store personal data
-      ourselves, most requests are best handled by our advertising partners, but you can always contact us and we
-      will help. You also have the right to lodge a complaint with your local data protection authority.</p>
+    <h2>6. Deleting your data</h2>
+    <p>In the Game: open <strong>SETTINGS</strong> → <strong>SAVE PROGRESS</strong> → <strong>DELETE MY DATA</strong>
+      and confirm. This deletes your cloud save, your leaderboard entry and your player ID, resets the analytics data
+      on the device and wipes the progress on the phone. It cannot be undone. If you no longer have the Game, email us.
+      Full instructions: <a href="delete-account.html">Delete your Drill Down data</a>.</p>
 
-    <h2>7. Changes to this policy</h2>
-    <p>We may update this Privacy Policy from time to time. The latest version will always be available on this
-      page, with the effective date shown at the top.</p>
+    <h2>7. Children</h2>
+    <p>The Game is not directed at children under 13 (or the higher minimum age in your country), and we do not
+      knowingly collect personal data from them. If you believe a child has used the Game and you want their data
+      removed, contact us and we will delete it.</p>
 
-    <h2>8. Contact</h2>
+    <h2>8. Your rights</h2>
+    <p>Depending on where you live (for example under the GDPR in the EU), you can ask to access, correct or delete your
+      data, to restrict or object to its processing, to receive a copy of it, and to withdraw your consent at any time
+      (withdrawing does not affect processing done before). To use these rights, email us. Because the Game has no
+      account with your name, include the Google Play Games (or Game Center) name your progress was linked to, if any,
+      so we can find your data. We answer within 30 days. You can also complain to your local data protection authority; in Romania this is the National Supervisory
+      Authority for Personal Data Processing (ANSPDCP).</p>
+
+    <h2>9. Where data is processed</h2>
+    <p>Google and Unity may process data outside your country, including in the United States. They do so under the
+      safeguards they describe in their own privacy terms.</p>
+
+    <h2>10. Security</h2>
+    <p>Data sent by the Game travels over encrypted connections (HTTPS). We use established service providers and keep
+      the Game's software up to date. No system is perfectly secure, but we work to protect your information.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>We may update this Privacy Policy. The latest version is always on this page, with the date shown at the top.</p>
+
+    <h2>12. Contact</h2>
     <p>Snappy Yeti — <a href="mailto:trashygoo@gmail.com">trashygoo@gmail.com</a></p>
   </article>
 </body>
